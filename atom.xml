@@ -5,9 +5,9 @@
   <subtitle>live</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://seriouszyx.github.io/"/>
+  <link href="https://seriouszyx.top/"/>
   <updated>2018-11-25T10:23:15.000Z</updated>
-  <id>https://seriouszyx.github.io/</id>
+  <id>https://seriouszyx.top/</id>
   
   <author>
     <name>Yixiang Zhao</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>IoC容器浅析及简单实现</title>
-    <link href="https://seriouszyx.github.io/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/2018/11/25/IoC%E5%AE%B9%E5%99%A8%E6%B5%85%E6%9E%90%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0.html"/>
-    <id>https://seriouszyx.github.io/技术相关/2018/11/25/IoC容器浅析及简单实现.html</id>
+    <link href="https://seriouszyx.top/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/2018/11/25/IoC%E5%AE%B9%E5%99%A8%E6%B5%85%E6%9E%90%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0.html"/>
+    <id>https://seriouszyx.top/技术相关/2018/11/25/IoC容器浅析及简单实现.html</id>
     <published>2018-11-25T06:43:04.000Z</published>
     <updated>2018-11-25T10:23:15.000Z</updated>
     
@@ -31,19 +31,19 @@
     
     </summary>
     
-      <category term="技术相关" scheme="https://seriouszyx.github.io/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
+      <category term="技术相关" scheme="https://seriouszyx.top/categories/%E6%8A%80%E6%9C%AF%E7%9B%B8%E5%85%B3/"/>
     
     
-      <category term="JavaWeb" scheme="https://seriouszyx.github.io/tags/JavaWeb/"/>
+      <category term="JavaWeb" scheme="https://seriouszyx.top/tags/JavaWeb/"/>
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.top/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://seriouszyx.github.io/uncategorized/2018/11/23/hello-world.html"/>
-    <id>https://seriouszyx.github.io/uncategorized/2018/11/23/hello-world.html</id>
+    <link href="https://seriouszyx.top/uncategorized/2018/11/23/hello-world.html"/>
+    <id>https://seriouszyx.top/uncategorized/2018/11/23/hello-world.html</id>
     <published>2018-11-23T04:18:39.000Z</published>
     <updated>2018-11-23T04:18:39.000Z</updated>
     
