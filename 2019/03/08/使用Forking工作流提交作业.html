@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      《Algorithms,Part 1》Programming Assignment 1: Percolation | 隐秀 | seriouszyx
+      使用Forking工作流提交作业 | 隐秀 | seriouszyx
     
   </title>
   <meta name="author" content="Yixiang Zhao">
@@ -119,7 +119,7 @@
 				<!-- Page title -->
 				<p>
 					
-						当前文章&nbsp;:&nbsp;《《Algorithms,Part 1》Programming Assignment 1: Percolation》
+						当前文章&nbsp;:&nbsp;《使用Forking工作流提交作业》
 					
 				</p>
 				<!-- Progress bar -->
@@ -286,8 +286,8 @@
 	
 	<div class="article-title">
 		
-	<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" itemprop="url">
-		《Algorithms,Part 1》Programming Assignment 1: Percolation
+	<a href="/2019/03/08/使用Forking工作流提交作业.html" itemprop="url">
+		使用Forking工作流提交作业
 	</a>
 
 	</div>
@@ -296,17 +296,17 @@
 		<span>
 			
 	发布于
-	<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" itemprop="url">
-		<time datetime="2019-01-06T08:07:13.000Z" itemprop="datePublished">
-	  		2019-01-06
+	<a href="/2019/03/08/使用Forking工作流提交作业.html" itemprop="url">
+		<time datetime="2019-03-08T05:23:13.000Z" itemprop="datePublished">
+	  		2019-03-08
 	  </time>
 	</a> 
 
 	/
 	更新于
-	<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" itemprop="url">
-		<time datetime="2019-01-06T08:07:13.000Z" itemprop="dateUpdated">
-	  		2019-03-04
+	<a href="/2019/03/08/使用Forking工作流提交作业.html" itemprop="url">
+		<time datetime="2019-03-08T05:23:13.000Z" itemprop="dateUpdated">
+	  		2019-03-08
 	  </time>
 	</a> 	
 
@@ -314,26 +314,12 @@
 		/
 		<span>
 			<i class="fa fa-tags"></i>
-			
-	
-		<a href="/tags/coursera/" class=" ">
-			coursera
-		</a>
-	
-		<a href="/tags/Algorithms/" class=" ">
-			Algorithms
-		</a>
-	
-		<a href="/tags/Programming-Assignment/" class=" ">
-			Programming Assignment
-		</a>
-	
-		
+					
 		</span>
 		/
 		
 
-    <span class="leancloud_visitors" id="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html_visitors" data-url="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" data-title="《Algorithms,Part 1》Programming Assignment 1: Percolation">
+    <span class="leancloud_visitors" id="/2019/03/08/使用Forking工作流提交作业.html_visitors" data-url="/2019/03/08/使用Forking工作流提交作业.html" data-title="使用Forking工作流提交作业">
         热度
         <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
     </span>
@@ -342,7 +328,7 @@
 
 
 
-    <span class="leancloud_likes" id="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html_likes" data-url="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" data-title="《Algorithms,Part 1》Programming Assignment 1: Percolation" rel="unlike">
+    <span class="leancloud_likes" id="/2019/03/08/使用Forking工作流提交作业.html_likes" data-url="/2019/03/08/使用Forking工作流提交作业.html" data-title="使用Forking工作流提交作业" rel="unlike">
         喜欢
         <i class="fa fa-heart"></i>
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -351,57 +337,70 @@
 	</div>
 
 	<div class="article-content" id="article-content">
-		<p>coursera 课程 《Algorithms,Part 1》第一周作业解答 —— 渗透模型。</p>
-<a id="more"></a>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>Programming Assignment 1 是一个并查集的应用——渗透模型。</p>
-<p><img src="https://i.loli.net/2019/01/06/5c31b84b6e708.png" alt="80D8C615-CF2F-4DDD-9A3B-7460DB13725F.png"></p>
-<p>给定义一个 $n\times n$ 的矩阵（代表一个系统），黑色代表节点被堵住，白色代表节点已经打开。默认情况下所有节点都被堵住，如果某一个节点与第一行的节点相连（connected），那么它就是 <code>full</code> 的。如果最后一行任意一个节点与第一个行任意一个节点相连，那么整个系统就是 <code>percolation</code>。</p>
-<p>假设每个节点打开的概率是 $p$，求整个系统 percolation 的阀值估计。</p>
-<p><img src="https://i.loli.net/2019/01/06/5c31bf3d3b947.png" alt="26697FCC-2B43-47B2-A94C-049E697D325A.png"></p>
-<p>对于这个问题，我们可以使用 <code>蒙特卡洛模拟(Monte Carlo simulation)</code>：</p>
-<ul>
-<li>所有的节点初始化为关闭（blocked）</li>
-<li>重复以下步骤，直到系统实现 percolation<ul>
-<li>在所有关闭的节点中随便选择一个</li>
-<li>打开（open）这个节点</li>
-</ul>
-</li>
-<li>此时打开的节点个数/总节点个数就是系统的阀值</li>
-</ul>
-<p>假设经过 $T$ 次实验，每次实验的阀值是 $x_t$，则平均值 $\bar x$ 和方差 $s^2$ 的计算公式如下：</p>
-<script type="math/tex; mode=display">\bar x=\frac{x_1+x_2+\dots+x_T}{T}, s^2=\frac{(x_1-\bar x)^2+(x_2-\bar x)^2+\dots+(x_T-\bar x)^2}{T-1}</script><p>假设 $T$ 足够大，下面给出阀值估计的 $95\%$ 的置信区间：</p>
-<p>$ \Bigg[ \bar x-\frac{1.96s}{\sqrt{T}}, x+\frac{1.96s}{\sqrt{T}} \Bigg] $</p>
-<p>要求实现两个类。Percolation.java 使用给定的 <code>WeightedQuickUnionUF</code> 实现以下 API，用于对渗透模型进行操作。</p>
-<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class Percolation {
-   public Percolation(int n)                // create n-by-n grid, with all sites blocked
-   public    void open(int row, int col)    // open site (row, col) if it is not open already
-   public boolean isOpen(int row, int col)  // is site (row, col) open?
-   public boolean isFull(int row, int col)  // is site (row, col) full?
-   public     int numberOfOpenSites()       // number of open sites
-   public boolean percolates()              // does the system percolate?
-
-   public static void main(String[] args)   // test client (optional)
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>PercolationStas.java 使用设计好的 Percolation 类进行蒙特卡洛模拟，并计算平均值、方差、置信区间等。</p>
-<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class PercolationStats {
-   public PercolationStats(int n, int trials)    // perform trials independent experiments on an n-by-n grid
-   public double mean()                          // sample mean of percolation threshold
-   public double stddev()                        // sample standard deviation of percolation threshold
-   public double confidenceLo()                  // low  endpoint of 95% confidence interval
-   public double confidenceHi()                  // high endpoint of 95% confidence interval
-
-   public static void main(String[] args)        // test client (described below)
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>Robert Sedgewick 已经在 Lecture Slides 上提到了一种有效的解决方案，那就是构造虚拟两个节点，以判断整个系统是否是 percolation。</p>
-<p><img src="https://i.loli.net/2019/01/06/5c31ec52650f8.png" alt="C1435870-4DB5-453B-B094-E4B51B9F0FFB.png"></p>
-<p>这种方式相当高效，我之前想的一种方法就无奈超时，这样 <code>isFull()</code> 和 <code>percolation()</code> 方法都是常数时间复杂度，这要比遍历一行节点效率高得多，尤其是第二个类的运行时，遍历的方法大概两分钟才能跑出来结果，而虚拟节点只需要两三秒钟。</p>
-<p>不过虚拟节点会出现 <code>回流</code> 问题，可以内置两个 WeightedQuickUnionUF 对象，分别用于 <code>isFull()</code> 和 <code>percolation()</code> 两种方法的记录。</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p><a href="https://github.com/seriouszyx/Algorithms-solution/tree/master/course/Percolation/src" target="_blank" rel="noopener">源代码</a></p>
-<p>好不容易冲到了 99，需要用 <code>FindBugs</code> 和 <code>CheckStyle</code> 保证代码质量。</p>
-<p>有时间把需要注意的地方补充了。</p>
+		<a id="more"></a>
+<h2 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h2><blockquote>
+<p>  在讲解之前先说明一下，下文中的<code>你们</code>指代码贡献者，<code>我</code>指项目维护者。</p>
+</blockquote>
+<p><code>Forking</code> 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着各个代码贡献者（你们）有2个 Git 仓库而不是1个：一个本地私有的（这里的本地私有不是指电脑上的本地，而是指你们 GitHub 账号下的远程仓库），另一个服务端公开的（指我的 GitHub 账号下的远程仓库）。</p>
+<p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking.png" width="500" hegiht="313"></p>
+<p>Forking 工作流的一个主要优势是，贡献的代码可以被集成，而不需要所有人都能 push 代码到仅有的中央仓库（我的远程仓库）中。 开发者 push 到自己的服务端仓库，而只有项目维护者才能 push 到正式仓库。 这样项目维护者可以接受任何开发者的提交，但无需给他正式代码库的写权限。</p>
+<p>效果就是一个分布式的工作流，能为大型、自发性的团队（包括了不受信的第三方）提供灵活的方式来安全的协作。 也让这个工作流成为开源项目的理想工作流。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="项目维护者初始化正式仓库"><a href="#项目维护者初始化正式仓库" class="headerlink" title="项目维护者初始化正式仓库"></a>项目维护者初始化正式仓库</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-1.png" alt=""></p>
+<p>和任何使用 Git 项目一样，第一步是创建在服务器上一个正式仓库，让所有团队成员都可以访问到。 通常这个仓库也会作为项目维护者的<a href="https://github.com/seriouszyx/Java-beginner" target="_blank" rel="noopener">公开仓库</a>。 </p>
+<p>这个步骤由我来完成。</p>
+<h3 id="开发者-fork-正式仓库"><a href="#开发者-fork-正式仓库" class="headerlink" title="开发者 fork 正式仓库"></a>开发者 <code>fork</code> 正式仓库</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-2.png" alt=""></p>
+<p>其它所有的开发（你们）需要 fork 正式仓库，fork 操作基本上就只是一个服务端的克隆。GitHub 有 fork 按钮只需点击就可以完成 fork 操作。</p>
+<p>这一步完成后，每个开发者都在服务端（你们 GitHub 账号下）有一个自己的仓库。</p>
+<h3 id="开发者克隆自己-fork-出来的仓库"><a href="#开发者克隆自己-fork-出来的仓库" class="headerlink" title="开发者克隆自己 fork 出来的仓库"></a>开发者克隆自己 <code>fork</code> 出来的仓库</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-3.png" alt=""></p>
+<p>下一步，各个开发者要克隆自己的公开仓库（是你们 GitHub 账号下的仓库，不是我账号下的），用熟悉的 git clone 命令。</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git clone https://user@bitbucket.org/user/repo.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Forking 工作流需要2个远程别名 —— 一个指向正式仓库，另一个指向开发者自己的服务端仓库。别名的名字可以任意命名，常见的约定是使用 origin 作为远程克隆的仓库的别名 （这个别名会在运行 git clone 自动创建），upstream（上游）作为正式仓库的别名。</p>
+<p>当然，在没有足够熟悉之前，我建议你们用这种常见的命名方式。</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git remote add upstream https://github.com/seriouszyx/Java-beginner.git
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>需要你们自己用上面的命令创建 upstream 别名，这里的 upstream 可以理解为一个引用指向了正式仓库（我账号下的仓库）。这样可以简单地保持本地仓库和正式仓库的同步更新。</p>
+<h3 id="开发者开发自己的功能"><a href="#开发者开发自己的功能" class="headerlink" title="开发者开发自己的功能"></a>开发者开发自己的功能</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-4.png" alt=""></p>
+<p>为了避免冲突的产生，你们需要建立一个自己的分支，在分支上进行操作：</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git checkout -b some-feature
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>some-future</code> 是分支名，你可以按照你喜欢的方式命名，不过建议你们命名为自己的姓名首字母缩写。 如果是我的话，我就会像下面这样命名：</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git checkout -b zyx
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注意一点，除了第一次，以后进行分支的切换时不需要加 <code>-b</code>。</p>
+<p>现在你就在自己的分支上处理代码，</p>
+<h3 id="开发者发布自己的功能"><a href="#开发者发布自己的功能" class="headerlink" title="开发者发布自己的功能"></a>开发者发布自己的功能</h3><p>一旦开发者准备好了分享新功能（完成作业后），需要做二件事。 首先，通过 push 他的贡献代码到自己的公开仓库中，让其它的开发者都可以访问到。 他的origin 远程别名应该已经有了，所以要做的就是：</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git add .
+git commit -m "balabala"
+git push origin feature-branch
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>这里最大的不同是 push 命令，你需要 push 的不是 master，而是你自己新建立的分支 <code>some-future</code>。</p>
+<p>第二件事，开发者要通知项目维护者，想要合并他的新功能到正式库中。 GitHub 提供了 Pull Request 按钮（在你们自己仓库的页面刷新会出现），弹出表单让你指定哪个分支要合并到正式仓库。 一般你会想集成你的功能分支到上游远程仓库的master分支中。</p>
+<h3 id="项目维护者集成开发者的功能"><a href="#项目维护者集成开发者的功能" class="headerlink" title="项目维护者集成开发者的功能"></a>项目维护者集成开发者的功能</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-6.png" alt=""></p>
+<p>这一步需要我来操作，你们可以大致看一下了解整个流程。</p>
+<p>当项目维护者收到pull request，他要做的是决定是否集成它到正式代码库中。有二种方式来做：</p>
+<p>1.直接在pull request中查看代码<br>2.pull代码到他自己的本地仓库，再手动合并</p>
+<p>第一种做法更简单，维护者可以在GUI中查看变更的差异，做评注和执行合并。 但如果出现了合并冲突，需要第二种做法来解决。这种情况下，维护者需要从开发者的服务端仓库中 fetch 功能分支， 合并到他本地的 master 分支，解决冲突：</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git fetch https://bitbucket.org/user/repo feature-branch
+# 查看变更
+git checkout master
+git merge FETCH_HEAD
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>变更集成到本地的master分支后，维护者要push变更到服务器上的正式仓库，这样其它的开发者都能访问到：</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git push origin master
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>注意，维护者的origin是指向他自己公开仓库的，即是项目的正式代码库。到此，<strong>开发者的贡献完全集成到了项目中</strong>。</p>
+<h3 id="开发者和正式仓库做同步"><a href="#开发者和正式仓库做同步" class="headerlink" title="开发者和正式仓库做同步"></a>开发者和正式仓库做同步</h3><p>由于正式代码库往前走了，其它的开发需要和正式仓库做同步。 </p>
+<p>举例来说，你们有几个人交了作业，或者我发布了新的任务，正式仓库的内容就发生了改变，你们需要获取最新的信息的话，就需要<code>同步</code>。</p>
+<pre class="line-numbers language-lang-shell"><code class="language-lang-shell">git pull upstream master
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>git pull 是一个拉取分支更新的命令，upstream 指我的远程仓库的别名（之前的步骤中创建过），master 指我的远程仓库的分支名。</p>
+<p><strong>注意，一定要先将自己的代码 push，我合并了之后，再 pull 拉取更新。</strong></p>
 <hr>
+
+<blockquote>
+<p>参考：<br>  <a href="https://github.com/oldratlee/translations/blob/master/git-workflows-and-tutorials/workflow-forking.md" target="_blank" rel="noopener">git-workflows-and-tutorials</a></p>
+</blockquote>
 	
 	</div>
 	
@@ -419,12 +418,8 @@
 	<span>
 		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
 		
-			<a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2018/12/25/大数据学习-初识Hadoop.html" title="大数据学习 | 初识 Hadoop" rel="next">
+			<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" title="《Algorithms,Part 1》Programming Assignment 1: Percolation" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -442,6 +437,26 @@
 		
 				<li>
 					<div>
+						<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" title="《Algorithms,Part 1》Programming Assignment 1: Percolation">
+							《Algorithms,Part 1》Programming Assignment 1: Percolation
+						</a>
+						<p>
+							coursera 课程 《Algorithms,Part 1》第一周作业解答 —— 渗透模型。
+
+问题Programming Assignment 1 是一个并查集的应用——渗透模型。
+
+给定义一个 $n\times n$ 的矩阵（代...
+						</p>
+					</div>
+
+					<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" title="《Algorithms,Part 1》Programming Assignment 1: Percolation">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="《Algorithms,Part 1》Programming Assignment 1: Percolation">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
 						<a href="/2018/12/25/大数据学习-初识Hadoop.html" title="大数据学习 | 初识 Hadoop">
 							大数据学习 | 初识 Hadoop
 						</a>
@@ -454,44 +469,6 @@
 
 					<a href="/2018/12/25/大数据学习-初识Hadoop.html" title="大数据学习 | 初识 Hadoop">				
 						<img src="https://i.loli.net/2018/12/27/5c2478c2654a3.jpg" class="relateImg" alt="大数据学习 | 初识 Hadoop">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">
-							IoC容器浅析及简单实现
-						</a>
-						<p>
-							Spring IoC 容器是 Spring 框架中最核心的部分，也是初学者难以理解的部分，对于这种关键的设计，简单实现一次能最大限度地加深理解，了解其中思想，对以后的开发也大有裨益。
-
-Spring IoC 容器浅析及简单实现Spri...
-						</p>
-					</div>
-
-					<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">				
-						<img src="/img/cart_cover.jpg" class="relateImg" alt="IoC容器浅析及简单实现">
-					</a>
-				</li>											
-		
-		
-				<li>
-					<div>
-						<a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业">
-							使用Forking工作流提交作业
-						</a>
-						<p>
-							
-工作方式
-  在讲解之前先说明一下，下文中的你们指代码贡献者，我指项目维护者。
-
-Forking 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着...
-						</p>
-					</div>
-
-					<a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业">				
-						<img src="/img/cart_cover.jpg" class="relateImg" alt="使用Forking工作流提交作业">
 					</a>
 				</li>											
 		
@@ -528,6 +505,24 @@ Pokemon-Terminal正值精灵宝可梦大热时期，在逛 GitH...
 
 					<a href="/2018/11/27/就决定是你了-为你的终端安装-Pokemon-皮肤.html" title="就决定是你了 | 为你的终端安装 Pokemon 皮肤">				
 						<img src="/img/cart_cover.jpg" class="relateImg" alt="就决定是你了 | 为你的终端安装 Pokemon 皮肤">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">
+							IoC容器浅析及简单实现
+						</a>
+						<p>
+							Spring IoC 容器是 Spring 框架中最核心的部分，也是初学者难以理解的部分，对于这种关键的设计，简单实现一次能最大限度地加深理解，了解其中思想，对以后的开发也大有裨益。
+
+Spring IoC 容器浅析及简单实现Spri...
+						</p>
+					</div>
+
+					<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="IoC容器浅析及简单实现">
 					</a>
 				</li>											
 		
@@ -653,17 +648,6 @@ Pokemon-Terminal正值精灵宝可梦大热时期，在逛 GitH...
  
 
 <!-- show math formula -->
-
-	<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config(
-			{ 
-				tex2jax: {
-					inlineMath: [['$','$'], ['\\(','\\)']]
-				} 
-			}
-		);
-	</script>
 
 
 
