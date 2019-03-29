@@ -1,0 +1,1363 @@
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
+
+	<!DOCTYPE html>
+	<html class="scrollbar">
+		
+
+<head><meta name="generator" content="Hexo 3.8.0">
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      普林斯顿算法课程Part1-week2 | 隐秀 | seriouszyx
+    
+  </title>
+  <meta name="author" content="Yixiang Zhao">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
+    <!-- jquery -->
+	<script src="/js/jquery-2.1.1.min.js"></script>
+
+  <!-- leancloud -->
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script src="/js/leancloud.js"></script>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="transition">
+					<div class="three-bounce1"></div>
+					<div class="three-bounce2"></div>
+					<div class="three-bounce3"></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground" data-img-mode="normal" data-normal-src="/img/bg.jpg" data-random-max="110" data-random-src="https://sariay.github.io/Random-img/">
+	<div class="mask">
+		<div class="h-header">
+			<div id="logo-S">
+				
+					<a href="/">
+						<img src="/img/logo.png" alt="Logo">
+					</a>
+				
+			</div>
+			<!-- Navigation in header(id="navigation-S") -->
+			<div id="navigation-S">
+				<ul>
+					
+						<li class="menu-home">
+							<a href="/" class="menu-item-home">主页</a>
+						</li>
+					
+						<li class="menu-archive">
+							<a href="/archives" class="menu-item-archive">归档</a>
+						</li>
+					
+						<li class="menu-categories">
+							<a href="/categories" class="menu-item-categories">分类</a>
+						</li>
+					
+						<li class="menu-tags">
+							<a href="/tags" class="menu-item-tags">标签</a>
+						</li>
+					
+						<li class="menu-阅读">
+							<a href="/reading" class="menu-item-阅读">阅读</a>
+						</li>
+					
+						<li class="menu-about">
+							<a href="/about" class="menu-item-about">关于</a>
+						</li>
+					
+						<li class="menu-gallery">
+							<a href="/gallery" class="menu-item-gallery">相册</a>
+						</li>
+					
+
+					
+						<li class="menu-search">
+							<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+						</li>
+					
+				</ul>			
+			</div>				
+		</div>
+
+		<div class="h-body">	
+			<!-- motto -->
+			
+				<div id="page-motto">
+					<p class="motto">
+						
+					</p>
+				</div>
+			
+
+			<div id="navigation-H">
+				<!-- Page title -->
+				<p>
+					
+						当前文章&nbsp;:&nbsp;《普林斯顿算法课程Part1-week2》
+					
+				</p>
+				<!-- Progress bar -->
+				<div id="progress-bar"></div>
+
+				<!-- Progress percent -->
+				<div id="progress-percentage">
+					<h1>0.0%</h1>
+				</div>
+			</div>
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<ul>
+				<!-- <li>
+					<a><i class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>切换背景</a>
+				</li> -->
+				<li>
+					<a href="javascript:;" id="read-more"><i class="fa fa-angle-double-down"></i>继续阅读</a>
+				</li>
+				<!-- <li>
+					<a href="https://github.com/Sariay/hexo-theme-Annie" target="_blank"><i class="fa fa-download"></i>克隆主题</a>
+				</li> -->
+			</ul>
+		</div>
+		
+		<!-- This is only a demo, please go to "https://time.is" to set your city time! -->
+<style type="text/css">
+	.header-date {
+		position: absolute;
+		left: 40px;
+		bottom: 30px;
+		writing-mode: tb-rl;
+		font-size: 36px;
+	}	
+	.header-date a {
+		border-bottom: none;
+	}
+	@media only screen and (max-width: 768 ) {
+		.header-date {
+			position: absolute;
+			left: 40px;
+			bottom: 30px;
+			writing-mode: tb-rl;
+			font-size: 20px;
+		}			
+	}
+</style>
+<div class="header-date">
+	<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow"></a>
+	<span id="Beijing_z43d"></span>
+</div>
+<script src="//widget.time.is/zh.js"></script>
+<script>
+	time_is_widget.init({
+		Beijing_z43d:{
+			template:"DATE", 
+			date_format:"year年 monthname dnum日"
+		}
+	});
+</script>
+</div></header>
+
+<!-- Navigation in div(id="navigation-H") -->
+<a class="nav-trigger">
+	<span></span>
+</a>
+
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<h3>Navigation</h3>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	<div class="nav-body">
+		<ul>
+			
+				<li class="menu-home">
+					<a href="/" class="menu-item-home">主页</a>
+				</li>
+			
+				<li class="menu-archive">
+					<a href="/archives" class="menu-item-archive">归档</a>
+				</li>
+			
+				<li class="menu-categories">
+					<a href="/categories" class="menu-item-categories">分类</a>
+				</li>
+			
+				<li class="menu-tags">
+					<a href="/tags" class="menu-item-tags">标签</a>
+				</li>
+			
+				<li class="menu-阅读">
+					<a href="/reading" class="menu-item-阅读">阅读</a>
+				</li>
+			
+				<li class="menu-about">
+					<a href="/about" class="menu-item-about">关于</a>
+				</li>
+			
+				<li class="menu-gallery">
+					<a href="/gallery" class="menu-item-gallery">相册</a>
+				</li>
+			
+
+			
+				<li class="menu-search">
+					<a href="javascript:;" class="popup-trigger" title="Search">搜索</a>
+				</li>
+			
+		</ul>
+	</div>
+
+	<div class="nav-footer">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/seriouszyx" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+</nav>
+
+		
+		<!--main-->
+		<main>
+			<div class="layout-post">
+	
+	
+	<div class="article-title">
+		
+	<a href="/2019/03/26/普林斯顿算法课程Part1-week2.html" itemprop="url">
+		普林斯顿算法课程Part1-week2
+	</a>
+
+	</div>
+
+	<div class="article-meta">
+		<span>
+			
+	发布于
+	<a href="/2019/03/26/普林斯顿算法课程Part1-week2.html" itemprop="url">
+		<time datetime="2019-03-26T02:20:07.000Z" itemprop="datePublished">
+	  		2019-03-26
+	  </time>
+	</a> 
+
+	/
+	更新于
+	<a href="/2019/03/26/普林斯顿算法课程Part1-week2.html" itemprop="url">
+		<time datetime="2019-03-26T02:20:07.000Z" itemprop="dateUpdated">
+	  		2019-03-29
+	  </time>
+	</a> 	
+
+		</span>
+		/
+		<span>
+			<i class="fa fa-tags"></i>
+			
+	
+		<a href="/tags/Java/" class=" ">
+			Java
+		</a>
+	
+		<a href="/tags/coursera/" class=" ">
+			coursera
+		</a>
+	
+		<a href="/tags/algorithms/" class=" ">
+			algorithms
+		</a>
+	
+		
+		</span>
+		/
+		
+
+    <span class="leancloud_visitors" id="/2019/03/26/普林斯顿算法课程Part1-week2.html_visitors" data-url="/2019/03/26/普林斯顿算法课程Part1-week2.html" data-title="普林斯顿算法课程Part1-week2">
+        热度
+        <i class="leancloud_visitors_count" id="leancloud_visitors_count">0</i>
+    </span>
+    
+    /
+
+
+
+    <span class="leancloud_likes" id="/2019/03/26/普林斯顿算法课程Part1-week2.html_likes" data-url="/2019/03/26/普林斯顿算法课程Part1-week2.html" data-title="普林斯顿算法课程Part1-week2" rel="unlike">
+        喜欢
+        <i class="fa fa-heart"></i>
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+
+	</div>
+
+	<div class="article-content" id="article-content">
+		<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><ul>
+<li>栈：先进（入栈）后出（出栈）</li>
+<li>队列：先进（入队）先出（出队）</li>
+</ul>
+<p>在实现之前，老师提到了模块化的思想，它使得我们能够用模块式可复用的算法与数据结构的库来构建更复杂的算法和数据结构，也使我们能在必要的时候更关注效率。这门课也会严格遵守这种风格。</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>假设我们有一个字符串的集合，我们想要实现对字符串集合的存储、定期取出并返回最后添加的字符串、检查集合是否为空。</p>
+<p>下面是 API：</p>
+<p><img src="https://raw.githubusercontent.com/seriouszyx/Princeton-Algorithms/master/Part1-week2/imgs/1.png" alt="1"></p>
+<h4 id="链表实现"><a href="#链表实现" class="headerlink" title="链表实现"></a>链表实现</h4><p>课程中有关链表的操作都使用内部类定义节点元素：</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">private class Node {
+    String item;
+    Node next;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>API 实现：</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class LinkedStackOfStrings {
+    private Node first = null;
+
+    private class Node {
+        String item;
+        Node next;
+    }
+
+    public boolean isEmpty() {
+        return first == null;
+    }
+
+    public void push (String item) {
+        Node oldfirst = first;
+        first = new Node();
+        first.item = item;
+        first.next = oldfirst;
+    }
+
+    public String pop() {
+        String item = first.item;
+        first = first.next;
+        return item;
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>上面的代码也体现了使用 Java 学习数据结构的优点，不需要考虑麻烦的指针，而且垃圾回收机制也避免了主动释放内存。</p>
+<p>在实现中，每个操作的最坏时间需求都是常数的；在 Java 中，每个对象需要16字节的内存空间，在这里，内部类需要8字节，字符串和 Node 节点的引用也分别需要8字节，所以每个 Node 节点共需要40字节，当元素数量 N 很大时，40N 是对空间需求非常接近的估计。</p>
+<h4 id="数组实现"><a href="#数组实现" class="headerlink" title="数组实现"></a>数组实现</h4><pre class="line-numbers language-lang-java"><code class="language-lang-java">public class ResizingArrayStackOfStrings {
+    private String[] s;
+    private int N = 0;
+
+    public FixedCapacityStackOfStrings(int capacity) {
+        s = new String[capacity];
+    }
+
+    public boolean isEmpty() {
+        return N == 0;
+    }
+
+    public void push (String item) {
+        if (N == s.length)
+            resize(2 * s.length);
+        s[N++] = item;
+    }
+
+    public String pop() {
+        String item = s[--N];
+        s[N] = null;
+        if (N > 0 && N == s.length / 4)
+            resize(s.length / 2);
+        return item;
+    }
+
+    private void resize(int capacity) {
+        String[] copy = new String[capacity];
+        for (int i = 0; i < N; i++)
+            copy[i] = s[i];
+        s = copy;
+    }
+
+    public ResizingArrayStackOfStrings() {
+        s = new String[1];
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>平均运行时间还是与常数成正比，只不过进行内存分配时，需要 O(N) 的复杂度。</p>
+<p><img src="https://raw.githubusercontent.com/seriouszyx/Princeton-Algorithms/master/Part1-week2/imgs/2.png" alt="2"></p>
+<p>当栈慢时，内存空间为 sizeOf(int) <em> N = 8N 个字节；当栈的元素个数占总内存空间的 1/4 时，它包括 8 个 int 类型的地址，3</em>8N 个无用的空间，所以消耗内存 32N 个字节。</p>
+<p>数组实现的栈内存占有在 8N 到 32N 之间。</p>
+<h4 id="动态数组-vs-链表"><a href="#动态数组-vs-链表" class="headerlink" title="动态数组 vs. 链表"></a>动态数组 vs. 链表</h4><p>虽然两种实现方式时间和空间复杂度近似相等，可还是有所差异。</p>
+<p>在课程讨论区一位 mentor 就做过这样的解释。对于内存分析，链表耗内存的关键在于每个节点要存储两部分，假如说要存储32位的整数，那么链表实现要包含32位的整数和32位的地址，空间复杂度就是 O(64n bits)；而数组只需要考虑一次开辟数组的内存，整个的内存消耗也就是 O(32n + 32 bits)，虽然可以看做同一量级的复杂度，但实际上常数不一样，下面的网站可以很好地体现：</p>
+<p><a href="https://www.desmos.com/calculator/0gvfaytclt" target="_blank" rel="noopener">https://www.desmos.com/calculator/0gvfaytclt</a></p>
+<p>时间复杂度链表要稳定一些，因为它每次操作都是 O(1)，而数组虽然总体来讲要快一点，但可能需要 resize()，造成不稳定因素。老爷子也举例子说，如果要进行飞机降落，每一个环节都不能出错，或是数据传输，不能因为某一时刻速度减慢而造成丢包，那么使用链表是更好地选择。</p>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>下面是队列的 API：</p>
+<p><img src="https://raw.githubusercontent.com/seriouszyx/Princeton-Algorithms/master/Part1-week2/imgs/3.png" alt="3"></p>
+<h4 id="链表实现-1"><a href="#链表实现-1" class="headerlink" title="链表实现"></a>链表实现</h4><pre class="line-numbers language-lang-java"><code class="language-lang-java">public class LinkedQueueOfStrings {
+    private Node first, last;
+
+    private class Node {
+        String item;
+        Node next;
+    }
+
+    public boolean isEmpty() {
+        return first == null;
+    }
+
+    public void enqueue(String item) {
+        Node oldlast = last;
+        last = new Node();
+        last.item = item;
+        last.next = null;
+        if (isEmpty())
+            first = last;
+        else
+            oldlast.next = last;
+    }
+
+    public String dequeue() {
+        String item = first.item;
+        first = first.next;
+        if (isEmpty())
+            last = null;
+        return item;
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="泛型和迭代器"><a href="#泛型和迭代器" class="headerlink" title="泛型和迭代器"></a>泛型和迭代器</h3><p>实现一个数据结构很自然要引入泛型，这里着重强调了 Java 不能创建泛型数组，所以使用强制转换来解决这一问题：</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">s = (Item[]) new Object[capacity];
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>虽然老爷子强调”A good code has zero cast”，不过这也是不得已而为之。</p>
+<p>迭代器有利于数据结构的迭代，而且可以使用 Java 的 for-each 方法。下面是两种链表的 iterator 的实现：</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class Stack<item> implements Iterable<item> {
+    ...
+    public Iterator<item> iterator() {
+        return new ListIterator();
+    }
+
+    private class ListIterator implements Iterator<item> {
+        private Node current = first;
+
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        public void remove() {
+            /* not support */
+        }
+
+        public Item next() {
+            Item item = current.item;
+            current = current.next;
+            return item;
+        }
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></item></item></item></item></code></pre>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class Stack<item> implements Iterable<item> {
+    ...
+    public Iterator<item> iterator() {
+        return new ReverseArrayIterator();
+    }
+
+    private class ReverseArrayIterator implements Iterator<item> {
+        private int i = N;
+
+        public boolean hasNext() {
+            return i > 0;
+        }
+
+        public void remove() {
+            /* not support */
+        }
+
+        public Item next() {
+            return s[--i];
+        }
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></item></item></item></item></code></pre>
+<h3 id="栈和队列的应用"><a href="#栈和队列的应用" class="headerlink" title="栈和队列的应用"></a>栈和队列的应用</h3><p>其实讲的还是栈的应用，列举了下面几点：</p>
+<ul>
+<li>编译器中的解析器</li>
+<li>Java 虚拟机</li>
+<li>word 中的撤销操作</li>
+<li>浏览器中的后退键</li>
+<li>函数调用</li>
+</ul>
+<p>又详细讲了算数表达式求值的 Dijkstra 双栈算法。</p>
+<h2 id="初级排序"><a href="#初级排序" class="headerlink" title="初级排序"></a>初级排序</h2><p>一开始讲了类实现 Comparable 接口的 compareTo() 方法，可以调用内置的 sort() 函数进行排序。</p>
+<p>在排序算法的实现中，比较和交换是两种最基础的操作，下面是他们的代码实现：</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">private static boolean less(Comparable v, Comparable w) {
+    return v.conpareTo(w) < 0;
+}
+
+private static void exch(Comparable[]a, int i, int j) {
+    Comparable swap = a[i];
+    a[i] = a[j];
+    a[j] = swap;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>基本的选择排序的方法是在第 i 次迭代中，索引比 i 更大的项中找到最小的的一项，然后和第 i 项交换。</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">    public static void sort(Comparable[] a) {
+        int N = a.length;
+        for (int i = 0; i < N; i++) {
+            int min = i;
+            for (int j = i + 1; j < N; j++) 
+                if (less(a[j], a[min])
+                    min = j;
+            exch(a, i, min);
+        }
+    }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>选择排序使用了 (N-1) + (N-2) + … + 1 + 0 ~ （N^2 / 2） 次比较和 N 次交换。时间复杂度是 O(N^2) ；空间复杂度是 O(N)。</p>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>对于第 i 个元素，将它与左边的元素比较，如果较小，则依次交换位置，直到被交换到正确的位置。</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public static void sort(Comparable[] a) {
+    int N = a.length();
+    for (int i = 0; i < N; i++) 
+        for (int j = i; j > 0; j--)
+            if (less(a[j], a[j-1]))
+                exch(a, j, j - 1);
+            else 
+                break;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>插入排序需要使用大约 1/4 N^2 次比较和大约 1/4 N^2 次交换，对于部分有序的数组，它的时间复杂度是线性的。</p>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><p>希尔排序以插入排序为出发点，进行一些调整，插入排序影响效率的主要因素是每次只能与相邻的元素交换，希尔排序的思想在于每次将数组项移动若干位置，每次排序都是在上一次基础上进行的，所以只需要进行少数几次交换。</p>
+<p>这里提出了一种手段，h-排序，即每次向前移动 h 个位置，其实 h = 1 时就是插入排序。希尔排序最关键的一步是找出递增序列（就是 h 的序列），进行序列中的 <code>h-排序</code> 后，数组应该保持有序，而且时间要尽量做到最优。我们使用的是 3x+1 的递增序列。</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public static void sort(Comparable[] a) {
+    int N = a.length;
+
+    int h = 1;
+    while (h < N/3)
+        h = 3 * h + 1;  // 1, 4, 13, 40, 121, 364, ...
+    while (h >= 1) {
+        // h-sort the array
+        for (int i = h; i < N; i++) {
+            for (int j = i; j >= h && less(a[j], a[j-h]); j -= h)
+                exch(a, j, j - h);
+        }
+        h = h / 3;
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>3x+1 序列下最差的比较次数是 O(N^3/2) ，不过实际上并没有那么慢，一般来讲时间复杂度大约是 O(NlogN)。简单的思想、不太复杂的代码，却带了显著的效率的提升，所以希尔排序一般用于嵌入式排序或硬件排序类的系统。</p>
+<p>不过目前为止都不能找到一个更好的序列，能使希尔排序的效率高于其他的一些更复杂的经典算法。</p>
+<h2 id="编程作业"><a href="#编程作业" class="headerlink" title="编程作业"></a>编程作业</h2><p>本周的作业是实现一个双端队列和一个随机队列。</p>
+<p>因为要求中提到了每个方法最差要达到常数时间复杂度，所以毫无疑问使用链表实现，设置头结点和指向前节点的指针，便于逆序访问。</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class Deque<item> implements Iterable<item> {
+
+    private Node first;
+    private int size = 0;
+
+    private class Node {
+        Item value;
+        Node next;
+        Node prev;
+    }
+
+    /**
+     * construct an empty deque
+     */
+    public Deque() {
+        first = new Node();
+        first.next = first;
+        first.prev = first;
+    }
+
+    /**
+     * is the deque empty?
+     * @return
+     */
+    public boolean isEmpty() {
+        return size == 0;
+    }
+
+    /**
+     *
+     * @return the number of items on the queue
+     */
+    public int size() {
+        return this.size;
+    }
+
+    /**
+     * add the item to the front
+     * @param item
+     */
+    public void addFirst(Item item) {
+        if (item == null)
+            throw new IllegalArgumentException();
+        Node lastfirst = first.next;
+        first.next = new Node();
+        first.next.value = item;
+        first.next.next = lastfirst;
+        first.next.prev = first.next;
+        lastfirst.prev = first.next;
+        size++;
+    }
+
+    /**
+     * add the item to the last
+     * @param item
+     */
+    public void addLast(Item item) {
+        if (item == null)
+            throw new IllegalArgumentException();
+        Node lastrear = first.prev;
+        first.prev = new Node();
+        first.prev.value = item;
+        first.prev.next = first;
+        first.prev.prev = lastrear;
+        lastrear.next = first.prev;
+        size++;
+    }
+
+    /**
+     * remove the item from the front
+     * @return
+     */
+    public Item removeFirst() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+        Node nextfirst = first.next.next;
+        Item item = first.next.value;
+        first.next = nextfirst;
+        nextfirst.prev = first;
+        size--;
+        return item;
+    }
+
+    /**
+     * remove the item from the last
+     * @return
+     */
+    public Item removeLast() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+        Node nextlast = first.prev.prev;
+        Item item = first.prev.value;
+        first.prev = nextlast;
+        nextlast.next = first;
+        size--;
+        return item;
+    }
+
+    /**
+     * return an iterator over items in order from front to end
+     * @return
+     */
+    @Override
+    public Iterator<item> iterator() {
+        return new DequeList();
+    }
+
+    private class DequeList implements Iterator<item> {
+
+        private Node current = first.next;
+
+        @Override
+        public boolean hasNext() {
+            return current.next != first.next;
+        }
+
+        @Override
+        public Item next() {
+            if (!hasNext())
+                throw new NoSuchElementException();
+            Item item = current.value;
+            current = current.next;
+            return item;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></item></item></item></item></code></pre>
+<p>随机队列要求出队的元素是随机的，我使用的是数组实现，随机一个索引，如果索引即为最后一个元素，则将其删除，否则将索引的元素与最后一个元素交换位置，再将它删除。</p>
+<pre class="line-numbers language-lang-java"><code class="language-lang-java">public class RandomizedQueue<item> implements Iterable<item> {
+
+    private int index = 0;
+    private Item[] arr;
+
+    /**
+     * construct an empty randomized queue
+     */
+    public RandomizedQueue() {
+        arr = (Item[]) new Object[1];
+    }
+
+    /**
+     * is the randomized queue empty?
+     * @return
+     */
+    public boolean isEmpty() {
+        return index == 0;
+    }
+
+    /**
+     *
+     * @return the number of items on the randomized queue
+     */
+    public int size() {
+        return index;
+    }
+
+    /**
+     * add the item
+     * @param item
+     */
+    public void enqueue(Item item) {
+        if (item == null)
+            throw new IllegalArgumentException();
+        if (index == arr.length)
+            resize(arr.length * 2);
+        arr[index++] = item;
+    }
+
+    /**
+     * remove and return a random item
+     * @return
+     */
+    public Item dequeue() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+        int i = StdRandom.uniform(index);
+        Item item = arr[i];
+        if (i == index - 1) {
+            arr[--index] = null;
+        } else {
+            arr[i] = arr[--index];
+            arr[index] = null;
+        }
+        if (index > 0 && index == arr.length / 4)
+            resize(arr.length / 2);
+        return item;
+    }
+
+    /**
+     * return a random item (but do not remove it)
+     * @return
+     */
+    public Item sample() {
+        if (isEmpty())
+            throw new NoSuchElementException();
+        int i = StdRandom.uniform(index);
+        return arr[i];
+    }
+
+    private void resize(int capacity) {
+        Item[] copy = (Item[]) new Object[capacity];
+        for (int i = 0; i < index; i++) {
+            copy[i] = arr[i];
+        }
+        arr = copy;
+    }
+
+    /**
+     * return an independent iterator over items in random order
+     * @return
+     */
+    @Override
+    public Iterator<item> iterator() {
+        return new RandomizedQueueList();
+    }
+
+    private class RandomizedQueueList implements Iterator<item> {
+
+        private int i = 0;
+
+        @Override
+        public boolean hasNext() {
+            return i < index;
+        }
+
+        @Override
+        public Item next() {
+            if (!hasNext())
+                throw new NoSuchElementException();
+            return arr[i++];
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+    }
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></item></item></item></item></code></pre>
+<hr>
+	
+	</div>
+	
+	<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+	<!-- relate post, comment...-->
+	<div class="investment-container">
+		<div class="investment-header">
+			<div class="investment-title-1">
+				<div class="on">相关文章</div>
+				<div>评论</div>
+			</div>
+			<div class="investment-title-2">	            
+				
+	<span>
+		<a href="javascript: window.scrollTo(0, 0);">返回顶部</a>
+		
+		
+			<a href="/2019/03/17/Assignment-2-Breakout.html" title="Assignment #2: Breakout" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+      		
+			</div>	
+		</div>
+		
+		<div class="investment-content">
+			<div class="investment-content-list">
+				
+
+<div class="relate-post">
+	<ul>
+		
+				<li>
+					<div>
+						<a href="/2019/03/17/Assignment-2-Breakout.html" title="Assignment #2: Breakout">
+							Assignment #2: Breakout
+						</a>
+						<p>
+							简答
+Java支持的数据类型有哪些？什么是自动拆装箱？
+接口和抽象类的区别是什么？
+String s = new String(“abc”); 创建了几个对象？为什么？
+
+Console Programming这部分的题没有 star...
+						</p>
+					</div>
+
+					<a href="/2019/03/17/Assignment-2-Breakout.html" title="Assignment #2: Breakout">				
+						<img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/QQ20190118-1.jpg" class="relateImg" alt="Assignment #2: Breakout">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/03/12/Assignment-1-Warmups.html" title="Assignment #1: Warmups">
+							Assignment #1: Warmups
+						</a>
+						<p>
+							简答
+为什么 Java 被称作是“平台无关的语言”？
+JDK 和 JRE 的区别是什么？
+什么是值传递和引用传递？
+
+
+  简答题可以去网上找相关内容，不过要在最后给出参考链接。不能只答一两句话，单纯的复制粘贴网上的答案，要结合自己的...
+						</p>
+					</div>
+
+					<a href="/2019/03/12/Assignment-1-Warmups.html" title="Assignment #1: Warmups">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="Assignment #1: Warmups">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">
+							IoC容器浅析及简单实现
+						</a>
+						<p>
+							Spring IoC 容器是 Spring 框架中最核心的部分，也是初学者难以理解的部分，对于这种关键的设计，简单实现一次能最大限度地加深理解，了解其中思想，对以后的开发也大有裨益。
+
+Spring IoC 容器浅析及简单实现Spri...
+						</p>
+					</div>
+
+					<a href="/2018/11/25/IoC容器浅析及简单实现.html" title="IoC容器浅析及简单实现">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="IoC容器浅析及简单实现">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" title="《Algorithms,Part 1》Programming Assignment 1: Percolation">
+							《Algorithms,Part 1》Programming Assignment 1: Percolation
+						</a>
+						<p>
+							coursera 课程 《Algorithms,Part 1》第一周作业解答 —— 渗透模型。
+
+问题Programming Assignment 1 是一个并查集的应用——渗透模型。
+
+给定义一个 $n\times n$ 的矩阵（代...
+						</p>
+					</div>
+
+					<a href="/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html" title="《Algorithms,Part 1》Programming Assignment 1: Percolation">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="《Algorithms,Part 1》Programming Assignment 1: Percolation">
+					</a>
+				</li>											
+		
+		
+				<li>
+					<div>
+						<a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业">
+							使用Forking工作流提交作业
+						</a>
+						<p>
+							
+工作方式
+  在讲解之前先说明一下，下文中的你们指代码贡献者，我指项目维护者。
+
+Forking 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着...
+						</p>
+					</div>
+
+					<a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业">				
+						<img src="/img/cart_cover.jpg" class="relateImg" alt="使用Forking工作流提交作业">
+					</a>
+				</li>											
+		
+		
+	</ul>
+</div>	
+			</div>
+			<div class="investment-content-list">
+				<div class="layout-comment">
+
+	
+
+		
+
+			<!-- comment gitalk -->
+			<!-- show gitalk comment -->
+<div id="gitalk-container"></div>
+
+<!-- gitalk`s css & js -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="/css/comment.css">
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+	//Thanks O-R
+	//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
+	//去除尾部匹配正则数组的字符串  
+	//Remove redundant characters
+	String.prototype.trimEnd = function(regStr) {
+		var result = this;
+		if(regStr == undefined || regStr == null || regStr == "") {
+			return result;
+		}
+		var array = regStr.split(',');
+
+		if(array.length > 0) {
+
+			var c = array.shift();
+			var str = this;
+			var i = str.length;
+			var rg = new RegExp(c);
+			var matchArr = str.match(rg);
+
+			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
+				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
+					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
+					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
+					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
+					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
+					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
+					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
+				matchStr = matchStr + '$';
+				result = str.replace(new RegExp(matchStr), "");
+			}
+
+			if(array.length > 0) {
+				return result.trimEnd(array.join())
+			} else {
+				return result;
+			}
+		}
+	};
+
+	//Create gitalk
+	var gitalk = new Gitalk({
+		clientID: '9e176d0e8dd97b9d46af',
+		clientSecret: 'e215f9a10b626332c3e937f4c535d97beaa09f6c',
+		//id: window.location.pathname,
+		//id: decodeURI(window.location.pathname),
+		//id: (window.location.pathname).split("/").pop().substring(0, 49),
+		id: decodeURI( md5( location.href.trimEnd('#.*$,\\?.*$,index.html$') ) ),
+		repo: 'seriouszyx.github.io',
+		owner: 'seriouszyx',
+		admin: 'seriouszyx',
+		distractionFreeMode: 'true',
+	})
+	gitalk.render('gitalk-container');
+</script>
+
+		
+		
+	
+
+</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+
+	<script>
+		var appid = 'mtpW2sIlIHeJQk0FGq2ddMVQ-gzGzoHsz',
+            appkey = 'S8VWUb1LK61DctReez2JM8P1';	  
+        AnnieLeancloud(appid, appkey);         
+	</script>
+    
+
+
+ 
+
+<!-- show math formula -->
+
+
+
+<script>
+	//Refer to https://xinyo.org/archives/66226, thanks xinyo!
+	function codeCopy() {
+		var copyContainerId = 'copy-nav';
+						
+		$("pre").before(" <nav class=' " + copyContainerId + " '><i class='code-language'></i></nav> ");
+		
+		$('.' + copyContainerId).append("<i class='fa fa-clipboard copy-btn' aria-hidden='true'></i>");
+		
+		$('#article-content').find('pre').each( function () {
+			var language = $(this).children('code').attr('class').substr(9);//why 9? Need to check language?
+			$(this).prev().find('.code-language').text( language );	
+		});
+				
+		//为复制按钮添加click事件
+		$('.copy-btn').on("click", function() {
+			//初始化
+			$("textarea").remove("#targetId");
+			
+			//获取对应的代码
+			var codePre = $(this).parent().next(),
+				codeText = codePre[0].textContent,
+				target = document.createElement("textarea");
+			target.style.position = "absolute";
+			target.style.left = "-9999px";
+			target.style.top = "0";
+			target.id = "targetId";
+			codePre.append(target);
+			target.textContent = codeText;
+
+			//选中textarea内的代码
+			target.focus();
+			target.setSelectionRange(0, target.value.length);
+
+			// 复制选中的内容
+			document.execCommand("copy");
+			
+			//删除添加的节点
+			$("textarea").remove("#targetId");
+			
+			var thisCopied = $(this);
+			thisCopied.addClass('copy-status');	
+			setTimeout( function() {
+				thisCopied.removeClass('copy-status');
+			}, 2000)
+		});	
+	}
+	
+	if( $('.layout-post').length )	{
+		codeCopy();
+	}
+</script>
+
+
+<!-- TODO: There seems to be a bug when you close the post gallery! -->
+<link rel="stylesheet" href="/plugin/lightgallery/css/lightgallery.css">
+<script src="/plugin/lightgallery/js/jquery-1.11.0.min.js"></script>
+<script src="/plugin/lightgallery/js/lightgallery-all.min.js"></script>
+
+<script type="text/javascript">
+	var postTitle = $('.article-title a').text() ? $('.article-title a').text() : "No post title!";
+	$('.article-content img').each(function() {
+		var imgPath = $(this).attr('src'),
+			imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		$(this).wrap('<div class="img-responsive" data-src="' + imgPath + '" data-responsive="' + imgPath + '" data-sub-html="<p>图片 ' + imgTitle + '</p><h4>文章' + postTitle + '</h4>"></div>');
+	});
+
+	$('.article-content').lightGallery({
+		mode: 'lg-slide',
+		selector: '.img-responsive',
+		share: false,
+		zoom: false,
+		download: false
+	});
+	//TODO：支持video
+</script>
+
+<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+		
+
+		<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+		<script src="/plugin/toc/katelog.min.js"></script>
+
+		
+	
+		</main>
+		
+		<!--footer-->
+		<footer>
+	<div class="social">
+		<ul>
+	
+		
+			<li>
+				<a href="http://github.com/seriouszyx" title="Github" target="_blank">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Weibo" target="_blank">
+					<i class="fa fa-weibo"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="mailto:http://github.com/" title="Email" target="_blank">
+					<i class="fa fa-envelope-o"></i>
+				</a>
+			</li>
+		
+
+		
+			<li>
+				<a href="http://github.com/" title="QQ" target="_blank">
+					<i class="fa fa-qq"></i>
+				</a>
+			</li>
+		
+		
+			<li>
+				<a href="http://github.com/" title="Twitter" target="_blank">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+		
+	 
+</ul>
+	</div>
+		
+	<div class="copyright">
+		<p>
+			 
+				&copy;2018 - 2019, content by Yixiang Zhao. All Rights Reserved.
+			
+			
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+		
+	<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+
+		<span id="busuanzi_container_page_pv">
+	  		本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+		</span>
+
+	
+
+
+
+
+		</p>
+		<p>
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay. 					
+		</p>
+	</div>		
+</footer>
+		
+    <!-- set '1' to show motto in all pages! -->
+
+	<script src="/js/motto.js"></script>
+	<script type="text/javascript">
+		$(".motto").html( getMingYanContent() );
+	</script>	
+
+
+
+
+    <!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup">
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      ESC
+   </span>
+		<div class="local-search-header">
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			
+
+   
+	<div id="topN"></div>
+	
+    <script>
+        var appid = 'mtpW2sIlIHeJQk0FGq2ddMVQ-gzGzoHsz',
+            appkey = 'S8VWUb1LK61DctReez2JM8P1',
+            limitCount = 10;
+        if( $('#topN').length ){
+            AV.initialize(appid, appkey);
+            var Counter = AV.Object.extend("Counter");  
+            topNPost(Counter, limitCount);
+        }
+    </script>
+   
+
+		</div>
+	</div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '-1';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+
+<!--back to top-->
+
+    
+	<div id="totop">
+  		<a href="javascript:;" name="TOTOP" class="fa fa-arrow-up"></a>
+	</div>
+	<div id="tobuttom">
+		<a href="javascript:;" name="TOBUTTOM" class="fa fa-arrow-down"></a>
+	</div>
+ 
+
+
+ 
+
+<script src="/js/vibrant.js"></script>
+<script src="/js/chinese.js"></script>
+<script src="/js/main.js"></script>
+	</body>
+	</html>
