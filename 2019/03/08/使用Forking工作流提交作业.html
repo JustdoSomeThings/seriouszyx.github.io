@@ -609,7 +609,7 @@
 <p>当项目维护者收到pull request，他要做的是决定是否集成它到正式代码库中。有二种方式来做：</p>
 <p>1.直接在pull request中查看代码<br>2.pull代码到他自己的本地仓库，再手动合并</p>
 <p>第一种做法更简单，维护者可以在GUI中查看变更的差异，做评注和执行合并。 但如果出现了合并冲突，需要第二种做法来解决。这种情况下，维护者需要从开发者的服务端仓库中 fetch 功能分支， 合并到他本地的 master 分支，解决冲突：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git fetch https://bitbucket.org/user/repo feature-branch</span><br><span class="line"><span class="meta">#</span><span class="bash"> 查看变更</span></span><br><span class="line">git checkout master</span><br><span class="line">git merge FETCH_HEAD</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git fetch https://bitbucket.org/user/repo feature-branch</span><br><span class="line"><span class="meta">#</span> 查看变更</span><br><span class="line">git checkout master</span><br><span class="line">git merge FETCH_HEAD</span><br></pre></td></tr></table></figure>
 <p>变更集成到本地的master分支后，维护者要push变更到服务器上的正式仓库，这样其它的开发者都能访问到：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>注意，维护者的origin是指向他自己公开仓库的，即是项目的正式代码库。到此，<strong>开发者的贡献完全集成到了项目中</strong>。</p>
