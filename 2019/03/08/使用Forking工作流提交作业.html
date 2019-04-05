@@ -171,24 +171,23 @@
 
 
 
-  <meta name="description" content="工作方式   在讲解之前先说明一下，下文中的你们指代码贡献者，我指项目维护者。  Forking 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着各个代码贡献者（你们）有2个 Git 仓库而不是1个：一个本地私有的（这里的本地私有不是指电脑上的本地，而是指你们 GitHub 账号下的远程仓库），另一个服务端公开的">
+  <meta name="keywords" content="git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用Forking工作流提交作业">
 <meta property="og:url" content="https://seriouszyx.github.io/2019/03/08/使用Forking工作流提交作业.html">
 <meta property="og:site_name" content="隐秀 | seriouszyx">
-<meta property="og:description" content="工作方式   在讲解之前先说明一下，下文中的你们指代码贡献者，我指项目维护者。  Forking 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着各个代码贡献者（你们）有2个 Git 仓库而不是1个：一个本地私有的（这里的本地私有不是指电脑上的本地，而是指你们 GitHub 账号下的远程仓库），另一个服务端公开的">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://seriouszyx.github.io/uploads/fork.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-1.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-2.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-3.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-4.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-6.png">
-<meta property="og:updated_time" content="2019-03-30T02:54:01.904Z">
+<meta property="og:updated_time" content="2019-04-05T05:41:56.334Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Forking工作流提交作业">
-<meta name="twitter:description" content="工作方式   在讲解之前先说明一下，下文中的你们指代码贡献者，我指项目维护者。  Forking 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着各个代码贡献者（你们）有2个 Git 仓库而不是1个：一个本地私有的（这里的本地私有不是指电脑上的本地，而是指你们 GitHub 账号下的远程仓库），另一个服务端公开的">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking.png">
+<meta name="twitter:image" content="https://seriouszyx.github.io/uploads/fork.png">
 
 
 
@@ -528,11 +527,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-03-30 10:54:01" itemprop="dateModified" datetime="2019-03-30T10:54:01+08:00">2019-03-30</time>
+                <time title="修改时间：2019-04-05 13:41:56" itemprop="dateModified" datetime="2019-04-05T13:41:56+08:00">2019-04-05</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Java-beginner/" itemprop="url" rel="index"><span itemprop="name">Java-beginner</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -572,12 +589,13 @@
       
 
       
-        <h2 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h2><blockquote>
+        <p><img src="/uploads/fork.png" alt=""></p>
+<a id="more"></a>
+<h2 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h2><blockquote>
 <p>  在讲解之前先说明一下，下文中的<code>你们</code>指代码贡献者，<code>我</code>指项目维护者。</p>
 </blockquote>
 <p><code>Forking</code> 工作流和其他工作流有根本的不同。 这种工作流不是使用单个服务端仓库作为『中央』代码基线，而是让各个开发者都有一个服务端仓库。 这意味着各个代码贡献者（你们）有2个 Git 仓库而不是1个：一个本地私有的（这里的本地私有不是指电脑上的本地，而是指你们 GitHub 账号下的远程仓库），另一个服务端公开的（指我的 GitHub 账号下的远程仓库）。</p>
 <p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking.png" width="500" hegiht="313"></p>
-<a id="more"></a>
 <p>Forking 工作流的一个主要优势是，贡献的代码可以被集成，而不需要所有人都能 push 代码到仅有的中央仓库（我的远程仓库）中。 开发者 push 到自己的服务端仓库，而只有项目维护者才能 push 到正式仓库。 这样项目维护者可以接受任何开发者的提交，但无需给他正式代码库的写权限。</p>
 <p>效果就是一个分布式的工作流，能为大型、自发性的团队（包括了不受信的第三方）提供灵活的方式来安全的协作。 也让这个工作流成为开源项目的理想工作流。</p>
 <h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><h3 id="项目维护者初始化正式仓库"><a href="#项目维护者初始化正式仓库" class="headerlink" title="项目维护者初始化正式仓库"></a>项目维护者初始化正式仓库</h3><p><img src="https://raw.githubusercontent.com/seriouszyx/PicBed/master/img/git-workflows-forking-1.png" alt=""></p>
@@ -655,7 +673,7 @@
   <p><span>本文标题:</span><a href="/2019/03/08/使用Forking工作流提交作业.html">使用Forking工作流提交作业</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 Yixiang Zhao 的个人博客">Yixiang Zhao</a></p>
   <p><span>发布时间:</span>2019年03月08日 - 13:23</p>
-  <p><span>最后更新:</span>2019年03月30日 - 10:54</p>
+  <p><span>最后更新:</span>2019年04月05日 - 13:41</p>
   <p><span>原始链接:</span><a href="/2019/03/08/使用Forking工作流提交作业.html" title="使用Forking工作流提交作业">https://seriouszyx.github.io/2019/03/08/使用Forking工作流提交作业.html</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://seriouszyx.github.io/2019/03/08/使用Forking工作流提交作业.html" aria-label="复制成功！"></i></span>
   </p>
@@ -687,6 +705,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i>git</a>
+          
+        </div>
       
 
       
@@ -812,7 +836,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">6</span>
+                      
+                    
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -855,7 +881,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">15</span>
+                      
+                    
+                    <span class="site-state-item-count">16</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
