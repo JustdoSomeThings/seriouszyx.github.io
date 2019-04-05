@@ -2008,7 +2008,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d41cc3;
+  background: #8c817a;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3382,4 +3382,15 @@ img.img-topic {
   position: absolute;
   left: 0.5em;
   top: 1.2375em;
+}
+.hider_title {
+  font-family: "Microsoft Yahei";
+  cursor: pointer;
+  color: #ef4a05;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
 }
