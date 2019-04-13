@@ -2008,7 +2008,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #04edb3;
+  background: #5c7811;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3317,18 +3317,6 @@ ul.breadcrumb li+li:last-child {
   color: #fc6423;
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
-}
-@media screen and (min-width: 1200px) {
-  body {
-    background-image: url("../../images/bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-  }
-  #footer a {
-    color: #eee;
-  }
 }
 code {
   color: #ff7600;
