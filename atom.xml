@@ -3,11 +3,11 @@
   <title>隐秀 | seriouszyx</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="/blog/atom.xml" rel="self"/>
   
-  <link href="https://seriouszyx.github.io/"/>
-  <updated>2019-05-07T02:41:28.741Z</updated>
-  <id>https://seriouszyx.github.io/</id>
+  <link href="https://seriouszyx.github.io/blog/"/>
+  <updated>2019-05-08T00:32:15.946Z</updated>
+  <id>https://seriouszyx.github.io/blog/</id>
   
   <author>
     <name>Yixiang Zhao</name>
@@ -17,9 +17,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>程序设计语言：PartA-week1 课程信息和配置SML环境</title>
+    <link href="https://seriouszyx.github.io/blog/2019/05/08/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%EF%BC%9APartA-week1-%E8%AF%BE%E7%A8%8B%E4%BF%A1%E6%81%AF%E5%92%8C%E9%85%8D%E7%BD%AESML%E7%8E%AF%E5%A2%83.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/05/08/程序设计语言：PartA-week1-课程信息和配置SML环境.html</id>
+    <published>2019-05-08T00:32:15.000Z</published>
+    <updated>2019-05-08T00:32:15.946Z</updated>
+    
+    <content type="html"><![CDATA[<p class="description"></p><p><img src="https://" alt="" style="width:100%"></p><a id="more"></a><h1 id=""><a href="#" class="headerlink" title="#"></a>#</h1><h1 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h1><h1 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h1><hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p class=&quot;description&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://&quot; alt=&quot;&quot; style=&quot;width:100%&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>普林斯顿算法课程Part1-week6</title>
-    <link href="https://seriouszyx.github.io/2019/05/07/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week6.html"/>
-    <id>https://seriouszyx.github.io/2019/05/07/普林斯顿算法课程Part1-week6.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/05/07/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week6.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/05/07/普林斯顿算法课程Part1-week6.html</id>
     <published>2019-05-07T02:17:26.000Z</published>
     <updated>2019-05-07T02:41:28.741Z</updated>
     
@@ -31,19 +51,19 @@
     
     </summary>
     
-      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/categories/Princeton-Algorithms/"/>
+      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/blog/categories/Princeton-Algorithms/"/>
     
     
-      <category term="coursera" scheme="https://seriouszyx.github.io/tags/coursera/"/>
+      <category term="coursera" scheme="https://seriouszyx.github.io/blog/tags/coursera/"/>
     
-      <category term="数据结构" scheme="https://seriouszyx.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://seriouszyx.github.io/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>【通天塔之Vue】壹 缘起-乾坤大挪移</title>
-    <link href="https://seriouszyx.github.io/2019/04/29/%E3%80%90%E9%80%9A%E5%A4%A9%E5%A1%94%E4%B9%8BVue%E3%80%91%E5%A3%B9-%E7%BC%98%E8%B5%B7-%E4%B9%BE%E5%9D%A4%E5%A4%A7%E6%8C%AA%E7%A7%BB.html"/>
-    <id>https://seriouszyx.github.io/2019/04/29/【通天塔之Vue】壹-缘起-乾坤大挪移.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/29/%E3%80%90%E9%80%9A%E5%A4%A9%E5%A1%94%E4%B9%8BVue%E3%80%91%E5%A3%B9-%E7%BC%98%E8%B5%B7-%E4%B9%BE%E5%9D%A4%E5%A4%A7%E6%8C%AA%E7%A7%BB.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/29/【通天塔之Vue】壹-缘起-乾坤大挪移.html</id>
     <published>2019-04-29T01:24:18.000Z</published>
     <updated>2019-04-29T03:09:21.098Z</updated>
     
@@ -55,23 +75,23 @@
     
     </summary>
     
-      <category term="Vue" scheme="https://seriouszyx.github.io/categories/Vue/"/>
+      <category term="Vue" scheme="https://seriouszyx.github.io/blog/categories/Vue/"/>
     
     
-      <category term="通天塔" scheme="https://seriouszyx.github.io/tags/%E9%80%9A%E5%A4%A9%E5%A1%94/"/>
+      <category term="通天塔" scheme="https://seriouszyx.github.io/blog/tags/%E9%80%9A%E5%A4%A9%E5%A1%94/"/>
     
-      <category term="vue" scheme="https://seriouszyx.github.io/tags/vue/"/>
+      <category term="vue" scheme="https://seriouszyx.github.io/blog/tags/vue/"/>
     
-      <category term="JavaScript" scheme="https://seriouszyx.github.io/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="https://seriouszyx.github.io/blog/tags/JavaScript/"/>
     
-      <category term="前端" scheme="https://seriouszyx.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="https://seriouszyx.github.io/blog/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>普林斯顿算法课程Part1-week5</title>
-    <link href="https://seriouszyx.github.io/2019/04/28/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week5.html"/>
-    <id>https://seriouszyx.github.io/2019/04/28/普林斯顿算法课程Part1-week5.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/28/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week5.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/28/普林斯顿算法课程Part1-week5.html</id>
     <published>2019-04-28T09:13:18.000Z</published>
     <updated>2019-04-28T09:31:55.318Z</updated>
     
@@ -83,21 +103,21 @@
     
     </summary>
     
-      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/categories/Princeton-Algorithms/"/>
+      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/blog/categories/Princeton-Algorithms/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="coursera" scheme="https://seriouszyx.github.io/tags/coursera/"/>
+      <category term="coursera" scheme="https://seriouszyx.github.io/blog/tags/coursera/"/>
     
-      <category term="数据结构" scheme="https://seriouszyx.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="数据结构" scheme="https://seriouszyx.github.io/blog/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
   <entry>
     <title>学习道路上的暂歇思考</title>
-    <link href="https://seriouszyx.github.io/2019/04/20/%E5%AD%A6%E4%B9%A0%E9%81%93%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%9A%82%E6%AD%87%E6%80%9D%E8%80%83.html"/>
-    <id>https://seriouszyx.github.io/2019/04/20/学习道路上的暂歇思考.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/20/%E5%AD%A6%E4%B9%A0%E9%81%93%E8%B7%AF%E4%B8%8A%E7%9A%84%E6%9A%82%E6%AD%87%E6%80%9D%E8%80%83.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/20/学习道路上的暂歇思考.html</id>
     <published>2019-04-20T04:39:37.000Z</published>
     <updated>2019-04-20T06:16:00.331Z</updated>
     
@@ -109,19 +129,19 @@
     
     </summary>
     
-      <category term="人生苦旅" scheme="https://seriouszyx.github.io/categories/%E4%BA%BA%E7%94%9F%E8%8B%A6%E6%97%85/"/>
+      <category term="人生苦旅" scheme="https://seriouszyx.github.io/blog/categories/%E4%BA%BA%E7%94%9F%E8%8B%A6%E6%97%85/"/>
     
     
-      <category term="大学生活" scheme="https://seriouszyx.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+      <category term="大学生活" scheme="https://seriouszyx.github.io/blog/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="个人总结" scheme="https://seriouszyx.github.io/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
+      <category term="个人总结" scheme="https://seriouszyx.github.io/blog/tags/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>普林斯顿算法课程Part1-week4</title>
-    <link href="https://seriouszyx.github.io/2019/04/15/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week4.html"/>
-    <id>https://seriouszyx.github.io/2019/04/15/普林斯顿算法课程Part1-week4.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/15/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week4.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/15/普林斯顿算法课程Part1-week4.html</id>
     <published>2019-04-15T01:31:43.000Z</published>
     <updated>2019-04-28T09:20:18.528Z</updated>
     
@@ -133,19 +153,19 @@
     
     </summary>
     
-      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/categories/Princeton-Algorithms/"/>
+      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/blog/categories/Princeton-Algorithms/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="算法" scheme="https://seriouszyx.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="https://seriouszyx.github.io/blog/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
   <entry>
     <title>Assignment #3:Hangman</title>
-    <link href="https://seriouszyx.github.io/2019/04/12/Assignment-3-Hangman.html"/>
-    <id>https://seriouszyx.github.io/2019/04/12/Assignment-3-Hangman.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/12/Assignment-3-Hangman.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/12/Assignment-3-Hangman.html</id>
     <published>2019-04-12T04:41:45.000Z</published>
     <updated>2019-04-12T05:48:23.068Z</updated>
     
@@ -157,17 +177,17 @@
     
     </summary>
     
-      <category term="Java-beginner" scheme="https://seriouszyx.github.io/categories/Java-beginner/"/>
+      <category term="Java-beginner" scheme="https://seriouszyx.github.io/blog/categories/Java-beginner/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
   </entry>
   
   <entry>
     <title>普林斯顿算法课程Part1-week3</title>
-    <link href="https://seriouszyx.github.io/2019/04/05/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week3.html"/>
-    <id>https://seriouszyx.github.io/2019/04/05/普林斯顿算法课程Part1-week3.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/04/05/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week3.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/04/05/普林斯顿算法课程Part1-week3.html</id>
     <published>2019-04-05T01:43:39.000Z</published>
     <updated>2019-04-05T02:07:01.769Z</updated>
     
@@ -179,21 +199,21 @@
     
     </summary>
     
-      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/categories/Princeton-Algorithms/"/>
+      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/blog/categories/Princeton-Algorithms/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="coursera" scheme="https://seriouszyx.github.io/tags/coursera/"/>
+      <category term="coursera" scheme="https://seriouszyx.github.io/blog/tags/coursera/"/>
     
-      <category term="algorithms" scheme="https://seriouszyx.github.io/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://seriouszyx.github.io/blog/tags/algorithms/"/>
     
   </entry>
   
   <entry>
     <title>普林斯顿算法课程Part1-week2</title>
-    <link href="https://seriouszyx.github.io/2019/03/26/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week2.html"/>
-    <id>https://seriouszyx.github.io/2019/03/26/普林斯顿算法课程Part1-week2.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/03/26/%E6%99%AE%E6%9E%97%E6%96%AF%E9%A1%BF%E7%AE%97%E6%B3%95%E8%AF%BE%E7%A8%8BPart1-week2.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/03/26/普林斯顿算法课程Part1-week2.html</id>
     <published>2019-03-26T02:20:07.000Z</published>
     <updated>2019-04-05T02:06:39.595Z</updated>
     
@@ -205,21 +225,21 @@
     
     </summary>
     
-      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/categories/Princeton-Algorithms/"/>
+      <category term="Princeton-Algorithms" scheme="https://seriouszyx.github.io/blog/categories/Princeton-Algorithms/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="coursera" scheme="https://seriouszyx.github.io/tags/coursera/"/>
+      <category term="coursera" scheme="https://seriouszyx.github.io/blog/tags/coursera/"/>
     
-      <category term="algorithms" scheme="https://seriouszyx.github.io/tags/algorithms/"/>
+      <category term="algorithms" scheme="https://seriouszyx.github.io/blog/tags/algorithms/"/>
     
   </entry>
   
   <entry>
     <title>Assignment #2: Breakout</title>
-    <link href="https://seriouszyx.github.io/2019/03/17/Assignment-2-Breakout.html"/>
-    <id>https://seriouszyx.github.io/2019/03/17/Assignment-2-Breakout.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/03/17/Assignment-2-Breakout.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/03/17/Assignment-2-Breakout.html</id>
     <published>2019-03-17T01:54:02.000Z</published>
     <updated>2019-04-05T05:45:37.837Z</updated>
     
@@ -231,19 +251,19 @@
     
     </summary>
     
-      <category term="Java-beginner" scheme="https://seriouszyx.github.io/categories/Java-beginner/"/>
+      <category term="Java-beginner" scheme="https://seriouszyx.github.io/blog/categories/Java-beginner/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="Java基础" scheme="https://seriouszyx.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="https://seriouszyx.github.io/blog/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>Assignment #1: Warmups</title>
-    <link href="https://seriouszyx.github.io/2019/03/12/Assignment-1-Warmups.html"/>
-    <id>https://seriouszyx.github.io/2019/03/12/Assignment-1-Warmups.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/03/12/Assignment-1-Warmups.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/03/12/Assignment-1-Warmups.html</id>
     <published>2019-03-12T09:57:50.000Z</published>
     <updated>2019-04-13T05:09:02.721Z</updated>
     
@@ -255,19 +275,19 @@
     
     </summary>
     
-      <category term="Java-beginner" scheme="https://seriouszyx.github.io/categories/Java-beginner/"/>
+      <category term="Java-beginner" scheme="https://seriouszyx.github.io/blog/categories/Java-beginner/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="Java基础" scheme="https://seriouszyx.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
+      <category term="Java基础" scheme="https://seriouszyx.github.io/blog/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
   </entry>
   
   <entry>
     <title>使用Forking工作流提交作业</title>
-    <link href="https://seriouszyx.github.io/2019/03/08/%E4%BD%BF%E7%94%A8Forking%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8F%90%E4%BA%A4%E4%BD%9C%E4%B8%9A.html"/>
-    <id>https://seriouszyx.github.io/2019/03/08/使用Forking工作流提交作业.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/03/08/%E4%BD%BF%E7%94%A8Forking%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%8F%90%E4%BA%A4%E4%BD%9C%E4%B8%9A.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/03/08/使用Forking工作流提交作业.html</id>
     <published>2019-03-08T05:23:13.000Z</published>
     <updated>2019-04-05T05:43:55.471Z</updated>
     
@@ -279,17 +299,17 @@
     
     </summary>
     
-      <category term="Java-beginner" scheme="https://seriouszyx.github.io/categories/Java-beginner/"/>
+      <category term="Java-beginner" scheme="https://seriouszyx.github.io/blog/categories/Java-beginner/"/>
     
     
-      <category term="git" scheme="https://seriouszyx.github.io/tags/git/"/>
+      <category term="git" scheme="https://seriouszyx.github.io/blog/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>《Algorithms,Part 1》Programming Assignment 1: Percolation</title>
-    <link href="https://seriouszyx.github.io/2019/01/06/%E3%80%8AAlgorithms-Part-1%E3%80%8BProgramming-Assignment-1-Percolation.html"/>
-    <id>https://seriouszyx.github.io/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html</id>
+    <link href="https://seriouszyx.github.io/blog/2019/01/06/%E3%80%8AAlgorithms-Part-1%E3%80%8BProgramming-Assignment-1-Percolation.html"/>
+    <id>https://seriouszyx.github.io/blog/2019/01/06/《Algorithms-Part-1》Programming-Assignment-1-Percolation.html</id>
     <published>2019-01-06T08:07:13.000Z</published>
     <updated>2019-03-04T11:25:33.336Z</updated>
     
@@ -301,21 +321,21 @@
     
     </summary>
     
-      <category term="知识总结" scheme="https://seriouszyx.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="https://seriouszyx.github.io/blog/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="coursera" scheme="https://seriouszyx.github.io/tags/coursera/"/>
+      <category term="coursera" scheme="https://seriouszyx.github.io/blog/tags/coursera/"/>
     
-      <category term="Algorithms" scheme="https://seriouszyx.github.io/tags/Algorithms/"/>
+      <category term="Algorithms" scheme="https://seriouszyx.github.io/blog/tags/Algorithms/"/>
     
-      <category term="Programming Assignment" scheme="https://seriouszyx.github.io/tags/Programming-Assignment/"/>
+      <category term="Programming Assignment" scheme="https://seriouszyx.github.io/blog/tags/Programming-Assignment/"/>
     
   </entry>
   
   <entry>
     <title>大数据学习 | 初识 Hadoop</title>
-    <link href="https://seriouszyx.github.io/2018/12/25/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0-%E5%88%9D%E8%AF%86Hadoop.html"/>
-    <id>https://seriouszyx.github.io/2018/12/25/大数据学习-初识Hadoop.html</id>
+    <link href="https://seriouszyx.github.io/blog/2018/12/25/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AD%A6%E4%B9%A0-%E5%88%9D%E8%AF%86Hadoop.html"/>
+    <id>https://seriouszyx.github.io/blog/2018/12/25/大数据学习-初识Hadoop.html</id>
     <published>2018-12-25T04:39:24.000Z</published>
     <updated>2019-03-07T08:56:52.520Z</updated>
     
@@ -328,19 +348,19 @@
     
     </summary>
     
-      <category term="知识总结" scheme="https://seriouszyx.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="https://seriouszyx.github.io/blog/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="大数据" scheme="https://seriouszyx.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+      <category term="大数据" scheme="https://seriouszyx.github.io/blog/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
-      <category term="Hadoop" scheme="https://seriouszyx.github.io/tags/Hadoop/"/>
+      <category term="Hadoop" scheme="https://seriouszyx.github.io/blog/tags/Hadoop/"/>
     
   </entry>
   
   <entry>
     <title>[总结|展望] 世界不会因为你的无知而停下脚步</title>
-    <link href="https://seriouszyx.github.io/2018/12/10/%E6%80%BB%E7%BB%93-%E5%B1%95%E6%9C%9B-%E4%B8%96%E7%95%8C%E4%B8%8D%E4%BC%9A%E5%9B%A0%E4%B8%BA%E4%BD%A0%E7%9A%84%E6%97%A0%E7%9F%A5%E8%80%8C%E5%81%9C%E4%B8%8B%E8%84%9A%E6%AD%A5.html"/>
-    <id>https://seriouszyx.github.io/2018/12/10/总结-展望-世界不会因为你的无知而停下脚步.html</id>
+    <link href="https://seriouszyx.github.io/blog/2018/12/10/%E6%80%BB%E7%BB%93-%E5%B1%95%E6%9C%9B-%E4%B8%96%E7%95%8C%E4%B8%8D%E4%BC%9A%E5%9B%A0%E4%B8%BA%E4%BD%A0%E7%9A%84%E6%97%A0%E7%9F%A5%E8%80%8C%E5%81%9C%E4%B8%8B%E8%84%9A%E6%AD%A5.html"/>
+    <id>https://seriouszyx.github.io/blog/2018/12/10/总结-展望-世界不会因为你的无知而停下脚步.html</id>
     <published>2018-12-10T14:18:05.000Z</published>
     <updated>2019-03-30T02:54:11.802Z</updated>
     
@@ -355,19 +375,19 @@
     
     </summary>
     
-      <category term="人生苦旅" scheme="https://seriouszyx.github.io/categories/%E4%BA%BA%E7%94%9F%E8%8B%A6%E6%97%85/"/>
+      <category term="人生苦旅" scheme="https://seriouszyx.github.io/blog/categories/%E4%BA%BA%E7%94%9F%E8%8B%A6%E6%97%85/"/>
     
     
-      <category term="大学生活" scheme="https://seriouszyx.github.io/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
+      <category term="大学生活" scheme="https://seriouszyx.github.io/blog/tags/%E5%A4%A7%E5%AD%A6%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="总结" scheme="https://seriouszyx.github.io/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="https://seriouszyx.github.io/blog/tags/%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>就决定是你了 | 为你的终端安装 Pokemon 皮肤</title>
-    <link href="https://seriouszyx.github.io/2018/11/27/%E5%B0%B1%E5%86%B3%E5%AE%9A%E6%98%AF%E4%BD%A0%E4%BA%86-%E4%B8%BA%E4%BD%A0%E7%9A%84%E7%BB%88%E7%AB%AF%E5%AE%89%E8%A3%85-Pokemon-%E7%9A%AE%E8%82%A4.html"/>
-    <id>https://seriouszyx.github.io/2018/11/27/就决定是你了-为你的终端安装-Pokemon-皮肤.html</id>
+    <link href="https://seriouszyx.github.io/blog/2018/11/27/%E5%B0%B1%E5%86%B3%E5%AE%9A%E6%98%AF%E4%BD%A0%E4%BA%86-%E4%B8%BA%E4%BD%A0%E7%9A%84%E7%BB%88%E7%AB%AF%E5%AE%89%E8%A3%85-Pokemon-%E7%9A%AE%E8%82%A4.html"/>
+    <id>https://seriouszyx.github.io/blog/2018/11/27/就决定是你了-为你的终端安装-Pokemon-皮肤.html</id>
     <published>2018-11-27T04:21:08.000Z</published>
     <updated>2018-11-27T05:38:45.000Z</updated>
     
@@ -380,23 +400,23 @@
     
     </summary>
     
-      <category term="折腾" scheme="https://seriouszyx.github.io/categories/%E6%8A%98%E8%85%BE/"/>
+      <category term="折腾" scheme="https://seriouszyx.github.io/blog/categories/%E6%8A%98%E8%85%BE/"/>
     
     
-      <category term="折腾" scheme="https://seriouszyx.github.io/tags/%E6%8A%98%E8%85%BE/"/>
+      <category term="折腾" scheme="https://seriouszyx.github.io/blog/tags/%E6%8A%98%E8%85%BE/"/>
     
-      <category term="Linux" scheme="https://seriouszyx.github.io/tags/Linux/"/>
+      <category term="Linux" scheme="https://seriouszyx.github.io/blog/tags/Linux/"/>
     
-      <category term="终端" scheme="https://seriouszyx.github.io/tags/%E7%BB%88%E7%AB%AF/"/>
+      <category term="终端" scheme="https://seriouszyx.github.io/blog/tags/%E7%BB%88%E7%AB%AF/"/>
     
-      <category term="美化" scheme="https://seriouszyx.github.io/tags/%E7%BE%8E%E5%8C%96/"/>
+      <category term="美化" scheme="https://seriouszyx.github.io/blog/tags/%E7%BE%8E%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>IoC容器浅析及简单实现</title>
-    <link href="https://seriouszyx.github.io/2018/11/25/IoC%E5%AE%B9%E5%99%A8%E6%B5%85%E6%9E%90%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0.html"/>
-    <id>https://seriouszyx.github.io/2018/11/25/IoC容器浅析及简单实现.html</id>
+    <link href="https://seriouszyx.github.io/blog/2018/11/25/IoC%E5%AE%B9%E5%99%A8%E6%B5%85%E6%9E%90%E5%8F%8A%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0.html"/>
+    <id>https://seriouszyx.github.io/blog/2018/11/25/IoC容器浅析及简单实现.html</id>
     <published>2018-11-25T06:43:04.000Z</published>
     <updated>2019-03-04T11:25:43.718Z</updated>
     
@@ -408,12 +428,12 @@
     
     </summary>
     
-      <category term="知识总结" scheme="https://seriouszyx.github.io/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="https://seriouszyx.github.io/blog/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="Java" scheme="https://seriouszyx.github.io/tags/Java/"/>
+      <category term="Java" scheme="https://seriouszyx.github.io/blog/tags/Java/"/>
     
-      <category term="JavaWeb" scheme="https://seriouszyx.github.io/tags/JavaWeb/"/>
+      <category term="JavaWeb" scheme="https://seriouszyx.github.io/blog/tags/JavaWeb/"/>
     
   </entry>
   
