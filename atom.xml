@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://seriouszyx.github.io/"/>
-  <updated>2019-05-08T00:32:15.946Z</updated>
+  <updated>2019-05-09T06:37:26.443Z</updated>
   <id>https://seriouszyx.github.io/</id>
   
   <author>
@@ -21,18 +21,22 @@
     <link href="https://seriouszyx.github.io/2019/05/08/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%EF%BC%9APartA-week1-%E8%AF%BE%E7%A8%8B%E4%BF%A1%E6%81%AF%E5%92%8C%E9%85%8D%E7%BD%AESML%E7%8E%AF%E5%A2%83.html"/>
     <id>https://seriouszyx.github.io/2019/05/08/程序设计语言：PartA-week1-课程信息和配置SML环境.html</id>
     <published>2019-05-08T00:32:15.000Z</published>
-    <updated>2019-05-08T00:32:15.946Z</updated>
+    <updated>2019-05-09T06:37:26.443Z</updated>
     
-    <content type="html"><![CDATA[<p class="description"></p><p><img src="https://" alt="" style="width:100%"></p><a id="more"></a><h1 id=""><a href="#" class="headerlink" title="#"></a>#</h1><h1 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h1><h1 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h1><hr>]]></content>
+    <content type="html"><![CDATA[<p><img src="/uploads/pla1.jpg" alt=""></p><a id="more"></a><h2 id="课程信息"><a href="#课程信息" class="headerlink" title="课程信息"></a>课程信息</h2><p>在知乎上<a href="https://www.zhihu.com/question/22436320" target="_blank" rel="noopener">Coursera 上有哪些课程值得推荐？</a>问题下看到了<code>字节</code>的回答下首推了这门课程——华盛顿大学的 <a href="https://www.coursera.org/learn/programming-languages" target="_blank" rel="noopener">Programming Languages</a>，大致看了下大纲，适合有一门编程语言背景的学生，目的是通过讲述几门小众语言来描述编程范式（尤其注重函数式编程范式）。整个课程分为三部分，A 部分讲解 SML，B 部分讲解 Racket，C 部分讲解 Ruby。</p><p>之前看过王垠的<a href="http://www.yinwang.org/blog-cn/2017/07/06/master-pl" target="_blank" rel="noopener">《如何掌握所有的程序语言》</a>，而 Programming Languages 大概就是学习编程语言特性的最好的课程。</p><h2 id="安装-SML-环境"><a href="#安装-SML-环境" class="headerlink" title="安装 SML 环境"></a>安装 SML 环境</h2><p>第一部分讲解 SML，使用 Emacs 做编程环境，我使用了是 Mac OS。</p><p>下面是一些基础的概念：</p><ul><li>SML(Standard Meta Language)：一种标准的函数式编程语言</li><li>M：指 <code>alt</code> 键</li><li>C：指 <code>control</code> 键</li><li>REPL(Read-Eval-Print Loop)：读取-求值-输出循环，是一个简单的、交互的编程环境</li></ul><h3 id="安装-Emacs"><a href="#安装-Emacs" class="headerlink" title="安装 Emacs"></a>安装 Emacs</h3><p>可以从 <a href="http://emacsformacosx.com/" target="_blank" rel="noopener">http://emacsformacosx.com/</a>下载 Emacs，下面是一些基本命令：</p><ul><li>C-x C-c：退出 Emacs</li><li>C-g：撤回当前操作</li><li>C-x C-f：打开一个文件</li><li>C-x C-s：保存一个文件</li><li>C-x C-w：写一个文件</li></ul><h3 id="安装-SML-NJ"><a href="#安装-SML-NJ" class="headerlink" title="安装 SML/NJ"></a>安装 SML/NJ</h3><p><a href="http://www.smlnj.org/dist/working/110.80/" target="_blank" rel="noopener">下载 smlnj</a>，在 <code>/.bash_profile</code> 中配置环境变量：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=<span class="string">"<span class="variable">$PATH</span>:/usr/local/smlnj/bin"</span></span><br></pre></td></tr></table></figure><p>打开 Terminal 输入 sml 将会看到 <code>Standard ML of New Jersey v110.80 [built: ...]</code> 的字样。</p><h3 id="安装-SML-Mode"><a href="#安装-SML-Mode" class="headerlink" title="安装 SML Mode"></a>安装 SML Mode</h3><p>SML Mode 就相当于 Emacs 和 SML 结合的模块。在 Emacs 中运行 <code>M-x list-packages</code>，找到 <code>sml-mode</code> 点击安装，在 <code>~/.emacs</code> 中添加环境变量：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(setenv <span class="string">"PATH"</span> (concat <span class="string">"/usr/local/smlnj/bin:"</span> (getenv <span class="string">"PATH"</span>)))</span><br><span class="line">(setq <span class="built_in">exec</span>-path (cons <span class="string">"/usr/local/smlnj/bin"</span>  <span class="built_in">exec</span>-path))</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">重启 Emacs，直接创建一个 `my.sml` 拖进 Emacs 中，输入内容：</span><br><span class="line"></span><br><span class="line">```sml</span><br><span class="line">val x = 2 + 4</span><br><span class="line">val y = x * 5</span><br></pre></td></tr></table></figure><p><code>C-x C-s</code> 保存，<code>C-c C-s</code> + Return 创建 SML/NJ REPL，相当于创建一个交互的界面，输入 <code>use &quot;my.sml&quot;</code> 显示结果。</p><p><img src="https://raw.githubusercontent.com/seriouszyx/Programming-Languages/master/PartA-week1/imgs/1.png" alt="1"></p><p>神的编辑器。</p><h2 id="编程作业"><a href="#编程作业" class="headerlink" title="编程作业"></a>编程作业</h2><p>第一周的作业就是让学生熟悉这门课交作业的流程，需要先过 Auto-Grader（每天只能提交一次），然后再进行 peer-assistance。</p><p>作业内容的话并不难，就是改一个符号，而且文档中都指出来了。</p><p>比较想记录的一点是 Emacs 的工作环境布局。左上角的 buffer（编辑窗口）是一个 SML REPL；右上角是编写 HomeWork 的文件；左下角是 HomeWork 的测试文件；右下角的 buffer 是一个 Command Console，用于显示对文件进行了哪些命令操作。</p><p><img src="https://raw.githubusercontent.com/seriouszyx/Programming-Languages/master/PartA-week1/imgs/2.png" alt="2"></p><p>弄出这个布局可以先切换到 sml-mode，然后 <code>C-c C-s</code> 调出 SML REPL，此时是一个上下布局。然后分别让光标悬浮在两个 buffer 中，通过 <code>C-x 3</code> 让光标所停留的 buffer 水平切分成两个 buffer，此时 Emacs 的一个四方格布局已经出来了。</p><p>然后就可以将文件拖到不同布局中，文件的排放看个人习惯。</p><p>环境布局弄好之后，通过鼠标点击或者 <code>C-x o</code> 就能移动光标到不同的 buffer。</p><p>接下来是 HW 的一般编写流程：</p><ul><li>在源代码中编写对应的 function，编写完成后要用 <code>C-x C-s</code> <strong>保存</strong>。</li><li>在 test 文件中编写测试，首行通过 use 语句引入源代码文件，保存。</li><li>在 SML REPL 里面通过 use 语句引入 test 文件，核对测试结果。</li></ul><blockquote><p>参考：<br><a href="https://www.jianshu.com/p/f6115fd42929" target="_blank" rel="noopener">在Emacs用SML</a><br><a href="https://zhuanlan.zhihu.com/p/37518107" target="_blank" rel="noopener">Programing Languages Part A Note（一）：工欲善其事，必先利其器</a></p></blockquote><hr>]]></content>
     
     <summary type="html">
     
-      &lt;p class=&quot;description&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;https://&quot; alt=&quot;&quot; style=&quot;width:100%&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;/uploads/pla1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
+      <category term="Programming-Languages" scheme="https://seriouszyx.github.io/categories/Programming-Languages/"/>
+    
+    
+      <category term="SML" scheme="https://seriouszyx.github.io/tags/SML/"/>
+    
+      <category term="Emacs" scheme="https://seriouszyx.github.io/tags/Emacs/"/>
     
   </entry>
   
