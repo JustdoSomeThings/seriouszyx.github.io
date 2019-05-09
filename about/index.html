@@ -177,6 +177,8 @@
 <meta name="twitter:description" content="关于我个人介绍HENU 计算机科学与技术专业 2017 级本科生缺乏创新思维的工科男努力在这个喧嚣的时代保持独立思考想成为有趣的人 学习方向Java Web 开发者，习惯使用 Spring 和 Java 生态，目前在学习 Java 以及计算机基础内容本科毕业后会攻读研究生，保持成绩，力争保研至 Top 10 个人兴趣曾经的网络小说狂曾经的王者峡谷召唤师，高三一年征战沙场 1200 余次，从 mob">
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="隐秀 | seriouszyx" type="application/atom+xml">
 
@@ -537,6 +539,10 @@
           </div>
           
 
+  
+    <div id="gitalk-container">
+    </div>
+    
   
 
 
@@ -943,6 +949,36 @@
 
 
 
+
+
+  
+  
+    
+  
+  <script type="text/javascript" src="https://unpkg.com/gitalk@1.4.0/dist/gitalk.min.js"></script>
+
+  
+  
+    
+  
+  <link rel="stylesheet" href="https://unpkg.com/gitalk@1.4.0/dist/gitalk.css">
+
+  
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+    
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '9e176d0e8dd97b9d46af',
+          clientSecret: 'e215f9a10b626332c3e937f4c535d97beaa09f6c',
+          repo: 'seriouszyx.github.io',
+          owner: 'seriouszyx',
+          admin: ['seriouszyx'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
